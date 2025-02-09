@@ -1,0 +1,3 @@
+/Users/mykytazaginei/Documents/Université/Programation en C/projet_image/cmake-build-debug/CMakeFiles/projet_image.dir
+/Users/mykytazaginei/Documents/Université/Programation en C/projet_image/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/mykytazaginei/Documents/Université/Programation en C/projet_image/cmake-build-debug/CMakeFiles/rebuild_cache.dir
