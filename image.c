@@ -227,15 +227,12 @@ void smoothImage(Image *img) {
         }
     }
 
-    // Apply the smoothing filter using a 3x3 window
     for (int y = 0; y < img->sizeY; y++) {
         for (int x = 0; x < img->sizeX; x++) {
             int sumR = 0, sumG = 0, sumB = 0;
             int count = 0;
-            // Loop through the 3x3 window around the current pixel
             for (int j = y - 1; j <= y + 1; j++) {
                 for (int i = x - 1; i <= x + 1; i++) {
-                    // Check that the indices are within the image boundaries
                     if (i >= 0 && i < img->sizeX && j >= 0 && j < img->sizeY) {
                         sumR += img->data[j][i].r;
                         sumG += img->data[j][i].v;
@@ -244,7 +241,6 @@ void smoothImage(Image *img) {
                     }
                 }
             }
-            // Compute the average for each color channel and store in the temporary array
             temp[y][x].r = (unsigned char)(sumR / count);
             temp[y][x].v = (unsigned char)(sumG / count);
             temp[y][x].b = (unsigned char)(sumB / count);
@@ -257,7 +253,6 @@ void smoothImage(Image *img) {
         }
     }
 
-    // Free the temporary memory
     for (int y = 0; y < img->sizeY; y++) {
         free(temp[y]);
     }
